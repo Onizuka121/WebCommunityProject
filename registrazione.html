@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body-page_login">
+
+
+    <form class="form-registrazione">
+        <div class="container">
+            <div class="container-foto-profilo">
+                <img id="img" src="profile.avif" name="foto_profilo" alt="foto profilo">
+                <input type="file" class="custom-file-input" name="foto_profilo" id="input-file" accept="image/*"
+                    onchange="ChangeFoto()">
+            </div>
+            <div class="container_dati_user">
+                <label>Nome</label>
+                <input class="inputs" type="text" name="nome">
+                <label>Cognome</label>
+                <input class="inputs" type="text" name="cognome">
+                <label>Email</label>
+                <input class="inputs" type="text" name="email">
+                <label>Città</label>
+                <input class="inputs" type="text" name="citta">
+                <label>Provincia</label>
+                <select name="provincia">
+                    <option value="Roma">Roma</option>
+                    <option value="Milano">Milano</option>
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <button><a href="index.html">ACCEDI</a></button>
+
+    </form>
+
+
+
+
+
+
+</body>
+<script>
+    const image = document.getElementById("img");
+    const input = document.getElementById("input-file");
+    function ChangeFoto() { image.src = URL.createObjectURL(input.files[0]); }
+
+</script>
+
+</html>

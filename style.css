@@ -1,0 +1,108 @@
+.body-page_login{
+    margin:  10% auto;
+    background-color: #191D88 ;
+    width: 200px;
+    align-items: center;
+    font-size: large;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color:#FFC436;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.form-accedi{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid  #337CCF;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0px 0px 40px 15px black;
+}
+.form-registrazione{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid  #337CCF;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0px 0px 40px 15px black;
+}
+.inputs , select{
+    border: 2px solid  #337CCF;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #1450A3;
+    color :#FFC436;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:larger;
+    text-wrap:stable;
+}
+select{
+    border-radius: 0px;
+    width: 40%;
+}
+
+input[type="submit"],button{
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: #1450A3;
+    color: #FFC436;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #1450A3;
+}
+.custom-file-input {
+    color: transparent;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: #1450A3;
+    color: #FFC436;
+    border-radius: 10px;
+    width: 27%;
+    padding: 10px;
+    font-weight: bold;
+   
+    border: 2px solid #1450A3;
+  }
+  .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'CAMBIA';
+    justify-content: center;
+    
+  }
+
+a{
+    color:#FFC436;
+    text-decoration: none;
+}
+.container-foto-profilo{
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    text-align: center;
+   
+}
+.container_dati_user{
+    display:flex;
+    flex-direction:column;
+    border-radius: 10px;
+    border: 1px solid #337CCF;
+    width: 90%;
+    padding: 15px;
+    gap:10px;
+}
+img{
+    width: 200px;
+    border-radius: 50%;
+    height: 200px;
+}
+
