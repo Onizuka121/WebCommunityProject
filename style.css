@@ -21,7 +21,7 @@
 }
 .form-registrazione{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border: 2px solid  #337CCF;
     border-radius: 10px;
     padding: 20px;
@@ -46,7 +46,7 @@ select{
     width: 40%;
 }
 
-input[type="submit"],button{
+input[type="submit"],button,input[type="button"]{
     margin: 0 auto;
     cursor: pointer;
     background-color: #1450A3;
@@ -105,4 +105,28 @@ img{
     border-radius: 50%;
     height: 200px;
 }
-
+.container{
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+}
+#container-categorie{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#container-main{
+    display: block;
+    flex-direction: column;
+    gap: 20px;
+}
+.container_dati_categoria{
+   
+    border-radius: 10px;
+    border: 1px solid #337CCF;
+    width: 90%;
+    height: auto;
+    padding: 30px;
+    gap:10px;
+}
