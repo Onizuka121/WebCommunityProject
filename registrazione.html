@@ -11,44 +11,87 @@
 <body class="body-page_login">
 
 
-    <form class="form-registrazione">
-        <div class="container">
-            <div class="container-foto-profilo">
-                <img id="img" src="profile.avif" name="foto_profilo" alt="foto profilo">
-                <input type="file" class="custom-file-input" name="foto_profilo" id="input-file" accept="image/*"
-                    onchange="ChangeFoto()">
-            </div>
-            <div class="container_dati_user">
-                <label>Nome</label>
-                <input class="inputs" type="text" name="nome">
-                <label>Cognome</label>
-                <input class="inputs" type="text" name="cognome">
-                <label>Email</label>
-                <input class="inputs" type="text" name="email">
-                <label>Città</label>
-                <input class="inputs" type="text" name="citta">
-                <label>Provincia</label>
-                <select name="provincia">
-                    <option value="Roma">Roma</option>
-                    <option value="Milano">Milano</option>
-                    <option value=""></option>
-                </select>
-            </div>
+    <div class="form-registrazione">
+        <div id="container-main">
+            <div class="container" id="container">
+                <div class="container-foto-profilo">
+                    <img id="img" src="profile.avif" name="foto_profilo" alt="foto profilo">
+                    <input type="file" class="custom-file-input" name="foto_profilo" id="input-file" accept="image/*"
+                        onchange="ChangeFoto()">
+                </div>
+                <div class="container_dati_user">
+                    <label>Nome</label>
+                    <input class="inputs" type="text" name="nome">
+                    <label>Cognome</label>
+                    <input class="inputs" type="text" name="cognome">
+                    <label>Email</label>
+                    <input class="inputs" type="text" name="email">
+                    <label>Città</label>
+                    <input class="inputs" type="text" name="citta">
+                    <label>Provincia</label>
+                    <select name="provincia">
+                        <option value="Roma">Roma</option>
+                        <option value="Milano">Milano</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div><br>
+            <center><button onclick="Continua('container-categorie','container-main')">CONTINUA</button></center>
         </div>
-        <button><a href="index.html">ACCEDI</a></button>
 
-    </form>
-
-
-
-
-
-
+        <div id="container-categorie">
+            <div class="container" id="container">
+                <div class="container_dati_categoria">
+                    <label>Categoria</label><br>
+                    <input type="checkbox" name="ballo"><span>Ballo</span><br>
+                    <input type="checkbox" name="ballo"><span>Concerto</span><br>
+                    <input type="checkbox" name="ballo"><span>Opening</span><br>
+                    <input type="checkbox" name="ballo"><span>DjSet</span><br>
+                    <input type="checkbox" name="ballo"><span>Discoteca</span><br><br>
+                    <div class="container_dati_user">
+                        <center><span style="margin:0 auto;"><b>USERNAME E PASSWORD :</b></span><br></center>
+                        <br><label>Username</label>
+                        <input class="inputs" type="text" name="username">
+                        <label>Imposta password</label>
+                        <input class="inputs" type="password" name="username" id="pass1">
+                        <label>Ripeti password</label>
+                        <input class="inputs" type="password" id="pass2" onchange="ControlloPass()">
+                    </div>
+                </div>
+            </div><br>
+            <center>
+                <a href="index.html">
+                    <input type="button" id="btn" onclick="Continua('container-main','container-categorie')" value="ACCEDI">
+                </a>
+            </center>
+        </div>
+    </div>
 </body>
 <script>
+    let btn = document.getElementById("btn");
+    btn.disabled = true;
     const image = document.getElementById("img");
     const input = document.getElementById("input-file");
     function ChangeFoto() { image.src = URL.createObjectURL(input.files[0]); }
+
+    function Continua(id, id2) {
+        let div = document.getElementById(id);
+        let div2 = document.getElementById(id2);
+        div.style.display = "block";
+        div2.style.display = "none";
+    }
+
+    function ControlloPass() {
+        let pass1 = document.getElementById("pass1").value;
+        let pass2 = document.getElementById("pass2").value;
+        if (pass1 != pass2) {
+            btn.style.color = "red";
+            alert("INSERISCI LA STESSA PASSWORD");
+        }else{
+            btn.style.color = "#FFC436";
+            btn.disabled = false;
+        }
+    }
 
 </script>
 
